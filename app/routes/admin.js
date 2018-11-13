@@ -4,8 +4,13 @@ module.exports = function(app) {
   });
 
   app.post('/noticias/salvar', function(req, res) {
+    const conn = app.config.dbConnection();
+    const noticiasModel = app.app.models.noticiasModel;
     const noticia = req.body;
-    res.send(noticia);
+
+    noticiasModel.salvarNoticia(noticia, conn, function(erro, resultado) {
+      res.redirect('/noticias');
+    });
   });
 }
 
