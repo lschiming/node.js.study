@@ -1,4 +1,4 @@
 module.exports = function(){
-  var status = 'Express rodando na porta 3000';
+  const status = 'Express rodando na porta 3000';
   return status;
 }

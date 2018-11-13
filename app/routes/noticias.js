@@ -4,8 +4,8 @@ module.exports = function(app) {
     var conn = app.config.dbConnection();
     var noticiasModel = app.app.models.noticiasModel;
 
-    noticiasModel.getNoticias(conn, function(err,result) {
-      res.render('./noticias/noticias', {noticias : result});
+    noticiasModel.getNoticias(conn, function(erro, resultado) {
+      res.render('./noticias/noticias', {noticias : resultado});
     });
   });
 }

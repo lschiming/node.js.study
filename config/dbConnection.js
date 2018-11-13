@@ -1,6 +1,6 @@
-var mysql = require('mysql');
+const mysql = require('mysql');
 
-var conn = function() {
+const conn = function() {
   console.log('Conexão estabelecida.');
   return mysql.createConnection({
     host : 'localhost',
